@@ -1,0 +1,78 @@
+[data-scroll] {
+  transition: all 1s;
+}
+/* FADE IN/OUT */
+.anime_fade[data-scroll='in'] {
+  opacity: 1;
+}
+.anime_fade[data-scroll='out'] {
+  opacity: 0;
+}
+/* LEFT TO RIGHT */
+.anime_leftToRight[data-scroll='in'] {
+  opacity: 1;
+  transform: translateX(0);
+}
+.anime_leftToRight[data-scroll='out'] {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+/* RIGHT TO LEFT */
+.anime_rightToLeft[data-scroll='in'] {
+  opacity: 1;
+  transform: translateX(0);
+}
+.anime_rightToLeft[data-scroll='out'] {
+  opacity: 0;
+  transform: translateX(50px);
+}
+/* BOTTOM TO TOP */
+.anime_bottomToTop[data-scroll='in'] {
+  opacity: 1;
+  transform: translateY(0);
+}
+.anime_bottomToTop[data-scroll='out'] {
+  opacity: 0;
+  transform: translateY(90px);
+}
+
+/* SPECIAL PICTURE */
+.anime_me[data-scroll='in'] {
+  opacity: 1;
+  transform: translateX(-50%);
+}
+.anime_me[data-scroll='out'] {
+  opacity: 0;
+  transform: translateX(-60%);
+}
+
+/* ANIME MY NAME  */
+.anime_myname {
+  animation: textEmerge 1400ms forwards;
+}
+.anime_field {
+  animation: textEmerge 2000ms forwards;
+}
+.anime_button {
+  opacity: 0;
+  animation: buttonFade 800ms ease-in-out forwards;
+  animation-delay: 1000ms;
+}
+@keyframes buttonFade {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes textEmerge {
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
