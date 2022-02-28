@@ -49,24 +49,16 @@ function App() {
   };
 
   return (
-    <div className='bg-[#010101]'>
+    <div className='bg-[#010101] z-0 relative overflow-y-hidden'>
+      <img
+        src={BackgroundHaze}
+        className='absolute max-w-6xl sm:max-w-7xl top-0 rotate-180 left-[50%] translate-x-[-50%] translate-y-[-35%] md:translate-y-[-30%] -z-10'
+        alt='Haze Background'
+      />
       {/* FIRST SECTION */}
 
       <div className='grid z-10 place-items-center text-white min-h-screen w-full'>
-        <div className='z-10 relative'>
-          <div className='-z-10'>
-            <img
-              src={BackgroundHaze}
-              className='absolute max-w-5xl md:max-w-6xl -z-10  top-[50%] left-[50%] duration-75 translate-x-[-50%] rotate-90 translate-y-[-65%] md:translate-y-[-55%]'
-              alt='Haze Background'
-            />
-          </div>
-          <img
-            src={BackgroundHaze}
-            className='absolute max-w-5xl opacity-50 md:max-w-7xl -z-10 top-[50%] left-[50%] duration-75 translate-x-[-50%] rotate-45 translate-y-[-65%] md:translate-y-[-60%]'
-            alt='Haze Background'
-          />
-
+        <div className='z-10'>
           <span className='overflow-hidden block'>
             <p className='anime_myname text-7xl sm:text-6xl z-10 duration-75 ease-out font-noto'>
               Khaled <br className='sm:hidden' /> Sanny
@@ -243,8 +235,9 @@ function App() {
       {/* THIRD SECTION */}
 
       <div className='grid z-10 place-items-center pt-32 text-gray-700'>
-        <p className='p-3 font-mono'>
-          &copy; {ActualDate} Khaled Sanny. Made with
+        <p className='p-3 font-mono text-center'>
+          &copy; {ActualDate} Khaled Sanny. <br className='sm:hidden' /> Made
+          with
           <FaHeart className='text-red-600 inline-block mx-2' />
           by me
         </p>
